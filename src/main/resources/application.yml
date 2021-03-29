@@ -1,0 +1,25 @@
+server:
+  port: 9027
+
+security:
+  jwt:
+    key-store: classpath:keystore.jks
+    key-store-password: letmein
+    key-pair-alias: mytestkey
+    key-pair-password: changeme
+
+
+ 
+spring:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/oauth_login?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: root  
+    initialization-mode : always
+  jpa.properties.hibernate.dialect : org.hibernate.dialect.MySQL8Dialect
+  jpa.hibernate.ddl-auto : none
+   
+ 
